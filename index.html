@@ -16,8 +16,13 @@
             }
             $(document).ready(function(){
                 $('#large_box').on("click", function(){
+                    let little_box = $('#large_box').children();
                     $(this).css('background-color', random_color());
-                    $(this).children().css('background-color', random_color());
+                    //eq () selecciona un elemento con un número de índice específico.
+                    little_box.eq(0).css('background-color', random_color());
+                    little_box.eq(1).css('background-color', random_color());
+                    little_box.eq(2).css('background-color', random_color());
+                    //$(this).children().css('background-color', random_color());
                     //alert('you clicked the big box!');  
             //comenta esto cuando hayas averiguado para qué se utiliza event.stopPropagation 
                 })
